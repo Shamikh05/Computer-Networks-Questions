@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+
+        char str[100];
+        printf("Enter a sentence : ");
+        gets(str);
+
+        int space = 0;
+        int letter = 0;
+        for(int i=0;i<strlen(str);i++) {
+                if(str[i] != ' ') {
+                        letter++;
+                }
+                else {
+                        space++;
+                }
+        }
+
+        printf("%d\n", letter/space);
+        return 0;
+}
