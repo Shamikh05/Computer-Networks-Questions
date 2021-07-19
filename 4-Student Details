@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct Student {
+        char name[50];
+        int id;
+        int phone;
+};
+
+int main() {
+        struct Student s[10];
+
+        for(int i=0;i<10;i++) {
+
+                printf("\nEnter the name of Student %d : ", i+1);
+                scanf(" %[^\n]", s[i].name);
+
+                printf("\nEnter the id of Student %d : ", i+1);
+                scanf("%d",&s[i].id);
+
+                printf("\nEnter the phone number of Student %d : ", i+1);
+                scanf("%d",&s[i].phone);
+        }
+
+        int sn;
+        printf("Enter the serial no. of the student of which you want to see the detail : ");
+        scanf("%d",&sn);
+
+
+        printf("Details of Student %d :\n\n", sn);
+
+        printf("Name of Student %d : %s\n", sn, s[sn-1].name);
+
+        printf("ID of Student %d : %d\n", sn, s[sn-1].id);
+
+        printf("Phone Number of Student %d : %d\n", sn, s[sn-1].phone);
+
+        printf("\n\n");
+
+        return 0;
+}
